@@ -5,6 +5,8 @@ const Pedido = require('./models/Pedido');
 const PedidoDAO = require('./dataAccess/pedidoDAO');
 const Pago = require('./models/Pago');
 const PagoDAO = require('./dataAccess/pagoDAO');
+const PedidoProducto = require('./models/PedidoProducto'); 
+const PedidoProductoDAO = require('./dataAccess/pedidoProductoDAO'); 
 
 db.conectar()
     .then(async () => {
@@ -13,7 +15,7 @@ db.conectar()
             // Hacer pruebas de las DAO
 
             db.desconectar();
-
+            
         } catch (err) {
             console.error('Error en las pruebas: ', err);
         }
